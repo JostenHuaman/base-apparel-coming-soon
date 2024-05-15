@@ -1,0 +1,206 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap');
+
+:root {
+    --Desaturated-Red: hsl(0, 36%, 70%);
+    --Soft-Red: hsl(0, 93%, 68%);
+    --Dark-Grayish-Red: hsl(0, 6%, 24%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Josefin Sans";
+    font-size: 16px;
+}
+
+.container {
+    & .logo {
+        padding: 30px;
+        width: 160px;
+    }
+    & .logo-desktop {
+        display: none;
+    }
+
+    & img {
+        width: 100%;
+    }
+
+    & h1 {
+        padding: 40px 30px 20px;
+        text-align: center;
+        font-size: 2.5em;
+        font-weight: 400;
+        text-transform: uppercase;
+        letter-spacing: 0.2em;
+        line-height: 1.1em;
+        color: var(--Dark-Grayish-Red);
+
+        & span {
+            color: var(--Desaturated-Red);
+            font-weight: 300;
+        }
+    }
+
+    & p {
+        font-size: 0.9em;
+        padding: 0px 26px 30px;
+        text-align: center;
+        line-height: 1.4em;
+        color: var(--Desaturated-Red);
+    }
+
+    & form {
+        width: 320px;
+        margin: 0 auto;
+        & div{
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;            
+            & input {
+                width: 320px;
+                height: 45px;
+                margin: 0 auto;
+                position: absolute;
+                border-radius: 20px;
+                border: 1px solid var(--Desaturated-Red);
+                padding: 20px;
+                z-index: 1;
+                outline: none;
+                &::placeholder {
+                    color: var(--Desaturated-Red);
+                }
+                
+            }
+            & embed{
+                z-index: 40;
+                margin-right: 10px;
+                display: none;
+            }
+    
+            & button {
+                opacity: 1;
+                width: 67px;
+                height: 45px;
+                z-index: 100;
+                background-color: var(--Soft-Red);
+                border-radius: 20px;
+                border: none;
+                cursor: pointer;
+                background-image: url(./images/icon-arrow.svg);
+                background-repeat: no-repeat;
+                background-position: center;
+                &:hover{
+                    color: var(--Desaturated-Red);
+                    background-color: hsl(0deg 100% 84.3%);
+                    scale: 1.2;
+                }
+            }
+        }
+        & .text-error{
+            margin-top: 10px;
+            padding-bottom: 0;
+            font-size: 0.7em;
+            color: var(--Soft-Red);
+            display: none;
+            text-align: start;
+        }
+        
+    }
+    
+}
+
+.attribution {
+    font-size: 1em;
+    text-align: center;
+    margin: 40px 20px;
+    color: var(--Dark-Grayish-Red);
+}
+
+.attribution a {
+    color: var(--Desaturated-Red)
+}
+
+
+@media (min-width:1000px){
+    .container{
+        & .logo{
+            display: none;
+        }
+        display: flex;
+        flex-direction: row-reverse;
+        & .logo-desktop{
+            display: block;
+            width: 160px;
+            margin: 50px 80px;
+        }
+        & .img-desktop{
+            width: 440px;
+            height: 90vh;
+        }
+        & h1{
+            padding: 0 30px;
+            text-align: start;
+            margin: 120px 50px 10px;
+            font-size: 4em;
+        }
+        & .text{
+            padding: 10px 30px;
+            margin: 0px 48px 50px; 
+            text-align: start;
+            font-size: 1em;
+            line-height: 2em;
+        }
+        & form{
+            width: 440px;
+            margin: 0 70px;
+            & div{
+                justify-content: start;
+                align-items: center;
+                justify-content: start;
+                & input{
+                    width: 380px;
+                }
+                & button{
+                    margin-left: 320px;
+                }
+                & embed{
+                    margin-left: 290px;
+                    margin-right: -300px;
+                }
+            }
+            & .text-error{
+                margin: 10x 0px;
+            }
+        }
+    }
+    & .attribution{
+        margin-bottom: 0;
+    }
+}
+
+
+@media (min-width:1300px){
+    .container{
+        & .logo-desktop{
+            margin: 80px 120px;
+        }
+        & .img-desktop{
+            width: 600px;
+        }
+        & h1{
+            font-size: 4.4em;
+            margin-left: 90px;
+        }
+        & .text{
+            margin: 0px 240px 50px 90px;
+        }
+        & form{
+            margin: 0 120px;
+        }
+    }
+}

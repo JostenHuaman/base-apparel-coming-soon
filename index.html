@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Base Apparel coming soon page</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <img class="logo" src="./images/logo.svg" type="">
+    <div>
+      <picture>
+        <source media="(max-width: 999px)" srcset="./images/hero-mobile.jpg">
+        <source  media="(min-width: 1000px)" srcset="./images/hero-desktop.jpg">
+        <img class="img-desktop" src="./images/hero-mobile.jpg" alt="Image">
+      </picture>
+    </div>
+    <div>
+      <img class="logo-desktop" src="./images/logo.svg" type="">
+      <h1>
+        <span>We're</span>  coming soon
+      </h1>
+      <p class="text">
+        Hello fellow shoppers! We're currently building our new fashion store. 
+        Add your email below to stay up-to-date with announcements and our launch deals.
+      </p>
+      <form id="form" action="" method="get" novalidate>
+        <div>
+          <input id="emailInput" type="email"  name="" id="" placeholder="Email Address" >
+          <embed class="alert" id="emailAlert" src="./images/icon-error.svg" type="">
+          <button type="submit">
+          </button>
+        </div>
+        <p id="emailError" class="text-error">
+          Please provide a valid email
+        </p>
+      </form>
+    </div>
+  </div> 
+  
+  <footer>
+    <p class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+      Coded by <a href="https://github.com/JostenHuaman" target="_blank">Josten Huaman Bellido</a>.
+    </p>
+  </footer>
+  <script src="./main.js"></script>
+</body>
+</html>
